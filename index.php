@@ -1,4 +1,4 @@
-<?php include "connect.php"; ?>
+<?php include("connect.php"); ?>
 
 
 <!DOCTYPE html>
@@ -46,7 +46,7 @@
                         <input type="text" class="form-control" name="Pais" id="l-pais"required>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-success col-12 mt-4">Guardar</button>
+                        <button type="submit" class="btn btn-primary col-12 mt-4">Guardar</button>
                     </div>
                 </form>
 
@@ -75,25 +75,27 @@
                             
                             $data = mysqli_query($conn, $query);
 
-                            while ($row = mysqli_fetch_array($data)){ ?>
+                            if ($data){
+                                while ($row = mysqli_fetch_array($data)){ ?>
+                                <tr>
+                                    <th scope="row"><?php echo $row["ID"] ?> </th>
+                                    <td><?php echo $row["Nombre"] ?></td>
+                                    <td><?php echo $row["Apellido"] ?></td>
+                                    <td><?php echo $row["Email"] ?></td>
+                                    <td><?php echo $row["Teléfono"] ?></td>
+                                    <td><?php echo $row["País"] ?></td>
+                                    <td><?php echo $row["FechaCreacion"] ?></td>
+                                    <td>
+                                        <button class="btn btn-warning">Actualizar</button>
+                                        <button class="btn btn-danger">Borrar</button>
+                                    </td>
+                                </tr>
+        
+        
+                                <?php  }   
+                            }?>
 
 
-                        <tr>
-                            <th scope="row"><?php echo $row["ID"] ?> </th>
-                            <td><?php echo $row["Nombre"] ?></td>
-                            <td><?php echo $row["Apellido"] ?></td>
-                            <td><?php echo $row["Email"] ?></td>
-                            <td><?php echo $row["Teléfono"] ?></td>
-                            <td><?php echo $row["País"] ?></td>
-                            <td><?php echo $row["FechaCreacion"] ?></td>
-                            <td>
-                                <button class="btn btn-secondary">Actualizar</button>
-                                <button class="btn btn-danger">Borrar</button>
-                            </td>
-                        </tr>
-
-
-                        <?php  }   ?>
 
 
 
