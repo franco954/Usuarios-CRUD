@@ -86,8 +86,8 @@
                                     <td><?php echo $row["País"] ?></td>
                                     <td><?php echo $row["FechaCreacion"] ?></td>
                                     <td>
-                                        <button class="btn btn-warning">Actualizar</button>
-                                        <button class="btn btn-danger">Borrar</button>
+                                        <a href="update-user.php?id=<?php echo $row['ID'] ?>" class="btn btn-warning">Actualizar</a>
+                                        <a href="delete-user.php?id=<?php echo $row['ID'] ?>" class="btn btn-danger">Borrar</a>
                                     </td>
                                 </tr>
         
