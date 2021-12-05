@@ -18,12 +18,15 @@
 
     <div class="container">
 
-        <h1 class="text-center mt-4 mb-5">Registro Usuarios</h1>
+        <h1 class="text-center mt-4 mb-5">CRUD</h1>
 
 
         <div class="row">
 
             <div class="col-3" class="text-center">
+
+            <div class="card card-body rounded">
+                <h4 class="text-center mb-3">Crear nuevo usuario</h4>
                 <form action="save-user.php" method="POST" name="save-user">
                     <div class="form-group">
                         <label for="l-nombre">Nombre</label>
@@ -46,16 +49,28 @@
                         <input type="text" class="form-control" name="Pais" id="l-pais"required>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary col-12 mt-4">Guardar</button>
+                        <button type="submit" class="btn btn-primary col-12 mt-4">
+                            
+                           Guardar
+
+                        </button>
                     </div>
                 </form>
+
+
+            </div>
 
             </div>
 
             <div class="col-9">
 
-                <table class="table table-hover">
-                    <thead>
+
+            
+
+    
+
+                <table class="table table-light table-hover border">
+                    <thead class="border border-dark">
                         <tr class="text-center">
                             <th scope="col">ID</th>
                             <th scope="col">Nombre</th>
@@ -77,16 +92,16 @@
 
                             if ($data){
                                 while ($row = mysqli_fetch_array($data)){ ?>
-                                <tr>
+                                <tr class="text-center">
                                     <th scope="row"><?php echo $row["ID"] ?> </th>
-                                    <td><?php echo $row["Nombre"] ?></td>
-                                    <td><?php echo $row["Apellido"] ?></td>
-                                    <td><?php echo $row["Email"] ?></td>
-                                    <td><?php echo $row["Teléfono"] ?></td>
-                                    <td><?php echo $row["País"] ?></td>
-                                    <td><?php echo $row["FechaCreacion"] ?></td>
+                                    <td class="border"  ><?php echo $row["Nombre"] ?></td>
+                                    <td class="border"  > <?php echo $row["Apellido"] ?> </td>
+                                    <td class="border" ><?php echo $row["Email"] ?></td>
+                                    <td class="border" ><?php echo $row["Teléfono"] ?></td>
+                                    <td class="border" ><?php echo $row["País"] ?></td>
+                                    <td class="border"><?php echo $row["FechaCreacion"] ?></td>
                                     <td>
-                                        <a href="update-user.php?id=<?php echo $row['ID'] ?>" class="btn btn-warning">Actualizar</a>
+                                        <a href="update-user.php?id=<?php echo $row['ID'] ?>" class="btn btn-success">Actualizar</a>
                                         <a href="delete-user.php?id=<?php echo $row['ID'] ?>" class="btn btn-danger">Borrar</a>
                                     </td>
                                 </tr>
@@ -104,6 +119,7 @@
 
                     </tbody>
                 </table>
+            
 
             </div>
 
@@ -132,8 +148,7 @@
 
 
 
-
-
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 </body>
 
 </html>
