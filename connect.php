@@ -5,7 +5,6 @@
 
 session_start();
 
-$_SESSION['modo'] = 0;
 
 $user = "root";
 $pass = "";

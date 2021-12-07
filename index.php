@@ -1,19 +1,7 @@
 <?php include("connect.php"); ?>
 
+<?php include("includes/head.php") ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro Usuarios CRUD</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-</head>
-
-<body>
 
 
     <div class="container">
@@ -64,11 +52,6 @@
 
             <div class="col-9">
 
-
-            
-
-    
-
                 <table class="table table-light table-hover border">
                     <thead class="border border-dark">
                         <tr class="text-center">
@@ -78,7 +61,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">Teléfono</th>
                             <th scope="col">País</th>
-                            <th scope="col">Fecha alta</th>
+                            <th scope="col">Ultima modificación</th>
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
@@ -110,13 +93,6 @@
                                 <?php  }   
                             }?>
 
-
-
-
-
-
-
-
                     </tbody>
                 </table>
             
@@ -130,25 +106,8 @@
         </div>
 
 
-
-
-
-
-
-
     </div>
 
 
 
-
-
-
-
-
-
-
-
-    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-</body>
-
-</html>
+<?php include("includes/footer.php") ?>
