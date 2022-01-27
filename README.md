@@ -5,6 +5,6 @@
 
 # Registro Usuarios
 
-CRUD para registrar usuarios programado en PHP usando MySQL como base de datos
+CRUD registro de usuarios en PHP y MySQL como BBDD
 
 <img src="./img/app.PNG" width="1000">
